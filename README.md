@@ -3,4 +3,5 @@
 ## 분류
 
 ### GIT 정리
-1. [git basic 정리](./Git/Git%20bassic.md)
+1. [git bassic 정리](./Git/Git%20bassic.md)
+2. [Python bassic 정리(진행중)](./Git/Python%20Bassic.md)
