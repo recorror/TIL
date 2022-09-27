@@ -9,7 +9,7 @@ for tc in range(1, T + 1):
     di = [0, 1, 0, -1]
     dj = [1, 0, -1, 0]
     r, c = 0, 0
-    ESWN = 0    # 우 하 좌 상
+    ESWN = 0    # 동 남 서 북
     for i in range(1, N*N + 1):
         arr[r][c] = i
         r += di[ESWN]
