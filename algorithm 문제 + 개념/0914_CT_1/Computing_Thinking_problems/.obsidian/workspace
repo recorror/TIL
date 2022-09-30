@@ -1,0 +1,137 @@
+{
+  "main": {
+    "id": "304e35d207160a5d",
+    "type": "split",
+    "children": [
+      {
+        "id": "146cae5d293c5135",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "5_재귀.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9302a0a9c11a4221",
+    "type": "split",
+    "children": [
+      {
+        "id": "fa3602c1b18a1e63",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb1fda2c52d091a6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "784bca0be3cb4768",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2be9904c1f68ec2e",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 187.5
+  },
+  "right": {
+    "id": "56360c2c122f15c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "b37f696ea4521cfa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "267ea245f18791ab",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "5_재귀.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b49176b86256fc49",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "5_재귀.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "161047ebdae1b9e4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ba41b46926822187",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "5_재귀.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "146cae5d293c5135",
+  "lastOpenFiles": [
+    "4_기초수식.md",
+    "3_집합과 조합.md",
+    "2_수와 표현.md"
+  ]
+}
