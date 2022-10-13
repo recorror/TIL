@@ -136,7 +136,7 @@ def comment_create(request, article_pk):
         comment.article = article
         comment.save()
         return redirect('articles:detail', article.pk)
-    
+
     context = {
         'article': article,
         'comment_form': comment_form,
@@ -147,5 +147,3 @@ def comment_create(request, article_pk):
     # 리다이렉트면 pk가 같이 넘어가지만, render의 경우 그렇지 않기 때문에
     # article 정보를 전달해준다. (context)
 ```
-
-
