@@ -1,41 +1,49 @@
 {
   "main": {
-    "id": "de4509d41eae3ac5",
+    "id": "fa3cf593aa78109c",
     "type": "split",
     "children": [
       {
-        "id": "662e49ffaad723dc",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "DB_2.md",
-            "mode": "source",
-            "source": false
+        "id": "0dfc6184d3450367",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e129ceccc50820b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Django/Django rest API.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        }
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "311357c10cae1671",
+    "id": "a8ad1a3b7d963e47",
     "type": "split",
     "children": [
       {
-        "id": "9eacd68a7fa50e49",
+        "id": "e42d4606f7499332",
         "type": "tabs",
         "children": [
           {
-            "id": "c459f9b43b73ad67",
+            "id": "5d09b9109a78b63f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
-            "id": "f5e11157d4af405f",
+            "id": "57c861be0e23ae0a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -50,7 +58,7 @@
             }
           },
           {
-            "id": "e4ba20d7e54c2d4e",
+            "id": "4a3394724610ac4c",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -61,23 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 177.5
+    "width": 200
   },
   "right": {
-    "id": "8e0d29ef4cb77f08",
+    "id": "e7006f64689ed531",
     "type": "split",
     "children": [
       {
-        "id": "dafc41fdc65130ee",
+        "id": "df7d8e7ee9737456",
         "type": "tabs",
         "children": [
           {
-            "id": "6cf238d72027d4e5",
+            "id": "846169e46bc1bb8b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB_2.md",
+                "file": "Django/Django rest API.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,19 +97,19 @@
             }
           },
           {
-            "id": "96a4c911da31e2c4",
+            "id": "f867230d9e116563",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB_2.md",
+                "file": "Django/Django rest API.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "878a3c607d35cdb2",
+            "id": "6e56c83263fe1ce3",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -112,12 +120,12 @@
             }
           },
           {
-            "id": "3c21af2497343ae2",
+            "id": "b60e867ff9eb0f51",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB_2.md"
+                "file": "Django/Django rest API.md"
               }
             }
           }
@@ -128,8 +136,15 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "662e49ffaad723dc",
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "9e129ceccc50820b",
   "lastOpenFiles": [
-    "무제노트.md"
+    "database/DB_기본.md",
+    "database/DB_2.md",
+    "database/DB_MN.md",
+    "Django/Django Form.md",
+    "Django/Django Model.md"
   ]
 }

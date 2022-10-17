@@ -8,7 +8,7 @@
 # Model
 
 - ORM을 통해 간단한 부분은 조작할 수 있다.
-- db라고 생각하면 됨.
+- db 비슷한거라고 생각하면 됨.
 - 테이블
   - 필드 - 콜럼col
   - 데이터 - 로우row, 튜플
@@ -27,7 +27,7 @@
 
 ****
 
-# ORM
+# ORM ( 객체 지향 맵핑 )
 
 - object- relational-mapping
 - django <-> SQL 데이터를 변환하는 기술
@@ -35,7 +35,7 @@
   -   : 객체 지향적 접근으로 인한 높은 생산성
   - 단점 : ORM만으로 완전한 서비스를 구현하기 어려운 경우가 있음
     
-       즉, SQL을 따로 공부해야함.
+       DB가 엄청 커지거나 했을 경우에는 SQL을 따로 공부해야함.
     
     > **DateTimeField()**
     1. auto_now_add
@@ -76,6 +76,7 @@
 ![](Django%20Model_assets/2022-09-01-12-01-09-image.png)
 
                     querySet과 상호작용하기 위해 사용하는 도구
+------
 
 ### CRUD
 
@@ -84,44 +85,3 @@
         - 생성    /  조회   /   수정    /   삭제
 
 - 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능 4가지를 묶어서 일컫는 말.
-
-### Create
-
-- Models.py 작성 예시
-
-```python
-class Post(models.Model):
-    # CharField, TextField 둘 다 문자를 저장하기 위한 필드
-    # CharField = 길이 제한 有 / TextField = 길이 제한 無
-    title = models.CharField(max_length=255)
-    content = models.TextField()
-```
-
-- views에 DB 저장하는 거 적어주기.
-
-```python
-# 사용자가 작성한 데이터를 받아서 DB에 저장하는 역할
-def create(request):
-    # 데이터를 저장하기 위해서는 사용자의 데이터를 확보
-    # print(request.GET)
-    title = request.GET.get(title)
-    content = request.GET.get(content)
-    # 확보한 데이터를 DB에 저장
-
-    # 데이터를 DB에 저장하는 방법은 3가지가 존재
-    # 1번 방법 (POST 클래스의 인스턴스를 생성)
-    post = Post()
-    post.title = title
-    post.content = content
-    post.save() # DB에 저장
-    # 2번 방법
-    post = Post(title = title, content = content,)
-    post.save()
-    # 3번 방법 Queryset API create 메서드를 이용한다.
-    # 반환되는 인스턴스는 이미 DB에 저장된 데이터
-    post = Post.objects.create(title=title,content=content)
-```
-
-
-
-### GET

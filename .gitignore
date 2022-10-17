@@ -12,6 +12,12 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+### Obsidian ###
+# config dir
+.obsidian/
+
+# End of https://www.toptal.com/developers/gitignore/api/obsidian
+
 # AWS User-specific
 .idea/**/aws.xml
 

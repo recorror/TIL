@@ -2,11 +2,13 @@
 
 HTML form, input 태그를 통해서 **사용자**로부터 데이터를 받을 때 **비정상적인 혹은 악의적인** 요청이 있을 수 있다.
 
-데이터 형식이 맞는지에 대한 <mark>**유효성 검증**</mark>이 반드시 필요하다.
+데이터 형식이 맞는지에 대한 <mark>유효성 검증</mark>이 반드시 필요하다.
 
 Django Form은 이 과정에서 과중한 작업과 반복 코드를 줄여줌으로써 훨씬 쉽게 유효성 검증을 진행할 수 있도록 만들어 줌.
 
-> ### Django는 Form에관련된 작업의 세 부분을 처리.
+---
+
+### Django는 Form에관련된 작업의 세 부분을 처리.
 
 1. 렌더링을 위한 데이터 준비 및 재구성
 
@@ -14,15 +16,16 @@ Django Form은 이 과정에서 과중한 작업과 반복 코드를 줄여줌�
 
 3. 클라이언트로부터 받은 데이터 수신 및 처리
 
-> ### Form Class 선언
+### Form Class 선언
 
 - form에는 model field와 달리 TextField가 존재하지 않음.
+- 'CharField()'를 정의해주고 
 
-> ### 'New' view 참고.
+>  'New' view 참고.
 > 
 > - 4일차 파일 참고
 
-> ### Django의 2가지 html input  요소 표현
+> Django의 2가지 html input  요소 표현
 
 1. Form fields
    

@@ -1,6 +1,5 @@
-# DB 2일차.
 
-> ### RDB(관계형 데이터베이스)
+## RDB(관계형 데이터베이스)
 
 - 데이터를 테이블, 행, 열 등으로 나누어 구조화하는 방식
 
@@ -11,27 +10,101 @@
   - 테이블 간의 관계 예시 그림 1)
 
 - 공유된 고객 id를 기반으로 연결된다.
+RDB에서의 관계
+1. 1:1
+	- 한 테이블의 레코드 하나가 다른 테이블의 레코드 단 한 개와 관련된 경우
+2. N:1
+	- 한 테이블의 0개 이상의 레코드가 다른 테이블의 레코드 한 개와 관련된 경우
+	- 기준 테이블에 따라 (1:N, N:1)이라고 함
+3. M:N
+	- 한 테이블의 0개 이상의 레코드가 다른 테이블의 0개 이상의 레코드와 관련된 경우
+	- 양쪽 모두에서 N:1 관계를 가짐.
+---
+## RDB 기본 구조
+
+1. 스키마
+2. 테이블
+	- 필드 (Column)
+	- 레코드 (Row)
+	- 기본 키 (Primary key)
+---
+## SQL
+- RDBMS (관계형 데이터 베이스 관리 시스템)의 **데이터를 관리하기 위해** 설계된 특수 목적의 프로그래밍 언어.
+- 스키마의 생성 및 수정 + 테이블에서의 자료 검색 및 관리도 할 수 있음.
+- 즉, SQL :: <mark>데이터베이스와 상호작용하는 방법</mark>
+### SQL Commands의 종류
+1. DDL (data definition Language)
+	- 데이터 정의 언어
+	- 생성, 수정하기 위한 언어.
+		- EX ) CREATE, DROP, ALTER
+2. DML (Data Manipulation Language)
+	- 데이터 조작 언어
+		- EX ) INSERT, SELECT, UPDATE, DELETE
+3. DCL (Data Control Language)
+	- 보안, 수행제어, 사용자 권한 부여 등등
+		- EX ) GRANT, REVOKE, COMMIT, ROLLBACK
+		- SQLite 에서는 
+***
+## DDL
+- CREATE TABLE
+```sql
+CREATE TABLE table_name (
+column_1 data_type constraints,
+column_2 data_type constraints,
+column_3 data_type constraints,
+);
+CREATE TABLE contacts (
+name TEXT NOT NULL,
+age INTEGER NOT NULL,
+email TEXT NOT NULL UNIQUE,
+);
+```
+- id 컬럼은 따로 정의하지 않으면 rowid 라는 컬럼으로 만들어진다.
+- Data Types 종류
+	- NULL , 없거나 알 수 없음.
+	- INTEGER , 정수
+	- REAL , 실수
+	- TEXT , 문자
+	- BLOB , 입력된 그대로를 이용 (바이너리 등 멀티미디어 파일, 이미지 등..)
+### SQLite
+- "동적 타입 시스템"을 사용 :: 컬럼에 선언된 타입에 의해서가 아니라 컬럼에 저장된 값에 따라 데이터 타입이 결정됨.
+- 다만 타 데이터베이스와의 호환을 위해 ==데이터 타입을 지정하는 것을 권장==
+---
+### Constraints
+>데이터 무결성
+- Constraints 종류
+	- NOT NULL, 데이터가 채워져있어야함.
+	- UNIQUE, 모든 값이 각각의 고유한 값이어야함.
+	- PRIMARY KEY, 행의 고유성을 식별하는 데 사용되는 컬럼. 테이블당 1개.
+	- AUTOINCREMENT, 삭제된 행의 값을 재사용하는 것을 방지.
+		- ex ) id INTEGER PRIMARY KEY AUTOINCREMENT, 이런 식으로.
+	- etc...
+---
+### ALTER TABLE
+1. Rename a table
+2. Rename a column
+3. Add a new column to a table
+4. Delete a column
+![[Pasted image 20221017034738.png]]
+- add a new column 시에 기존 데이터가 있을 경우 컬러에 값을 줘야함.
+	- 끝에 NOT NULL DEFAULT 'any text'; 이런거 적어서 어떤 값이든 일단 부여!
+- PRIMARY KEY or UNIQUE 제약 조건이 있는 경우
+  ![[Pasted image 20221017035114.png]]
+***
+## DML
 
 ****
-
-### Foreign Key
+## Foreign Key
 
 - 외래 키
-
 - 다른 테이블의 행을 식별할 수 있는 키
-
 - 참조되는 테이블의 기본 키(PK)를 가리킴.
-
 - 반드기 기본 키일 필요는 없지만 <mark>무조건 유일한 값이어야함</mark>.
-
 - 2개의 필수 위치 인자가 필요
   
   1. 참조하는 <mark>model class</mark>
-  
   2. <mark>on_delete</mark> 옵션
-     
      - CASCADE : 부모 객체가 삭제 됐을 때 이를 참조하는 객체도 삭제
-     
      - PROTECT, SET_NULL, SET_DEFAULT 등 여러 옵션 값들이 존재
 
 - ForeignKey 인스턴스는 클래스 이름의 단수형으로 작성할 것.
@@ -66,9 +139,9 @@ ex) 댓글과 글, 글과 작성자의 관계.
 
 ****
 
-### 관계 모델 참조
+## 관계 모델 참조
 
-> ### Related manager
+### Related manager
 
 - N:1 or M:N 관계가 설정되면 역참조할 때에 사용할 수 있는 manager를 생성.
   
