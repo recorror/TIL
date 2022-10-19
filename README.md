@@ -13,4 +13,7 @@
 
 1. [web이란?]
 
+
+### JavaScript
+1. [기초 문법](./JavaScript/JavaScript 기초문법.md)
 2. 
