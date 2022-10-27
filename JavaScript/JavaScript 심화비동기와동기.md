@@ -28,7 +28,7 @@
 
 > 비동기 처리 동작 방식
 
-1.  Call Stack
+1. Call Stack
 
 2. Call Stack -> Web API
 
@@ -108,4 +108,40 @@
   
   ![](JavaScript%20심화비동기와동기_assets/2022-10-26-10-22-44-image.png)
 
+### AJAX
 
+- 페이지 새로고침 없이 서버에 요청
+
+- 서버로부터 응답을 받아 작업을 수행.
+
+- action과 method 속성을 대체할 수 있다.
+
+****
+
+1. 내가 누른 버튼의 DOM 조작하기
+   
+   ```textile
+   - 그냥 선택하면 안 되었기 때문에, 바꾸고 싶은 form 값만 선택해서
+   eventListener를 추가해줬다.
+   - preventDefault 쓰지 않으면 submit 이벤트가 동작해서 새로고침이 된다거나
+   내가 원하지 않는 결과를 가지고 올 수 있다.
+   
+   =preventDefault = 기본 이벤트를 동작하지 않게 해주는 메서드()=
+   
+   - n 번째를 알고 싶다면 해당 pk 값을 속성으로 전달받아야한다.
+   - dataset 
+   html: data-변수명-"값"
+   JS: dataset.변수명 (카멜 케이스) 
+   ```
+
+2. axios 요청으로 좋아요 보내기
+   
+   ```textile
+   axios를 이용해서 url, method 설정 요청. => 동작 x
+       403 Forbiden file ... 즉, CSRF TOKEN이 없기 때문.
+   {%csrf token%}로 생성된 값을 추출
+   속성 선택자 [name=csrfmiddlewaretoken] 요소 선택해서 value값을 추출,
+   headers라는 곳에 value값을 전달,,
+   ```
+
+3. 응답 받은 ajax로 DOM 조작하기
