@@ -1,22 +1,33 @@
 # DOM !!!
 
 - Document Object Model ( 문서 객체 모델 )
+
 - Document를 어떻게 조작할 것인가 !
+
 - DOM 구조가 동적으로 페이지에 스타일을 추가하는 등, 조작하는 방법을 제공한다.
   
   ## DOM
+
 - 웹 페이지는 결국 하나의 문서이고 브라우저로 인해 해석이 되는 것이다. 때문에 document (문서)라는 이름이 붙은 것이다.
+
 - **DOM은 웹 페이지의 객체 지향 표현**이며, JavaSctipt와 같은 스크립트 언어를 사용하여 수정할 수 있다.
+
 - 특별히 import 할 것은 없다. 기본적으로 설치되어 있기 때문에
+
 - 대신, 특별한 객체를 이용해야한다.
   
   ### window
+
 - DOM의 최상위 객체
+
 - 탭 하나하나가 각각의 window이다.
   
   ### document
+
 - 우리는 브라우저 조작보다는 문서를 조작할 것이다.
+
 - 파싱(Parsing)
+  
   - 문자로 된 HTML 문서를 해석하여 Tree구조로 만들고, 스타일을 입힌 후 배치를 하는 것이다.
   - 이 과정은 너무 빠르기 때문에 우리의 눈으로는 볼 수 없지만 이러한 과정을 거쳐서 만들어지는 것이다.
 
@@ -34,33 +45,44 @@
    - document<mark>.querySelectorAll</mark>(selector)
    - 여러 element를 선택
 - NodeList
+  
   - forEach를 통해 값에 접근할 수 있다.
+  
   - querySelectorAll()에 의해 반환되는 NodeList는 DOM의 변경사항을 실시간으로 반영하지 않는다.
     
     ### 조작
+
 - 생성
+  
   - document<mark>.createElement</mark>(tagName)
   - 작성한 tagName의 요소를 반환해준다.
+
 - 입력
+  
   - Node<mark>.innerText()</mark>
   - 태그 안에 내용을 적는 부분이 innerText이다.
+
 - 추가
+  
   - Node<mark>.appendChild()</mark>
   - 부모 노드의 자식 NodeList 중 마지막 자식으로 삽입.
   - 한 번에 오직 하나의 Node만 추가 -> 반환까지
+
 - 삭제
+  
   - Node<mark>.removeChild()</mark>
   - DOM 에서 삭제.
+
 - DOM 조작 예시
   
   ![Pasted image 20221024145102.png](C:\Users\saffy\ssafy8\TIL\JavaScript\첨부이미지\Pasted%20image%2020221024145102.png)
-  
-  
-  
 
 - 속성 조회 및 설정
+  
   - Element<mark>.getAttribute</mark>(attributeName)
+  
   - Element<mark>.setAttribute</mark>(name, value)
+    
     - 이미 존재하면 값을 갱신, 존재하지 않으면 생성
       
       ![Pasted image 20221024151608.png](C:\Users\saffy\ssafy8\TIL\JavaScript\첨부이미지\Pasted%20image%2020221024151608.png)
@@ -70,11 +92,15 @@
 # Event
 
 - Event란 프로그래밍하고 있는 시스템에서 일어나는 사건 혹은 발생.
+  
   - ex ) 클릭한다, 클릭에 대한 이벤트 발생
+  
   - 키 입력, 마우스 갖다대기, 클릭 등등 여러가지 트리거가 존재한다.
     
     ### Event Object
+
 - DOM이 Event를 받고 -> 처리 할 수 있다.
+  
   - <mark>addEventListener()</mark>라는 Event 처리기(Event handler)를 다양한 html 요소에 "부착"해서 처리함.
   - "대상에 특정 Event가 발생하면, 할 일을 등록하자"
   - EventTarget.addEventListener(type, listener\[, options])
@@ -82,13 +108,20 @@
     - listener : 지정한 타입의 Event를 수신할 객체
       - 콜백 함수여야한다.
       - 콜백 합수는 발생한 Event의 데이터를 가진 Event 객체를 유일한 매개변수로 받음.
+
 - [button Event](./js/03_js/event/01_button.html)
+
 - input Event
+
 - button_input
+
 - [<mark>prevent</mark>](./js/03_js/event/04_prevent.html)
+  
   - event.preventDefault()
   - 복사를 막아준다. 매주 중요!!
+
 - [lotto](./js/03_js/event/05_lotto.html)
+
 - [todo](./js/03_js/event/06_todo.html)
 
 ******
