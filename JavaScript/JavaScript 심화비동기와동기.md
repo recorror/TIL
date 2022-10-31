@@ -12,6 +12,8 @@
 
 ## 비동기
 
+- `먼저 처리되는 부분부터 보여줄 수 있기 때문에` 사용자 경험 측면에서 매우 우수하다.
+
 - 작업을 시작한 후 결과를 기다리지 않고 다음 작업을 처리. (병렬적 수행)
 
 - ex) 메일전송을 누르면 사용자는 목록 탭으로 돌아가 다른 것을 바로 할 수 있지만 뒤에선 메일 전송을 위한 프로그램이 돌아가고 있는 것이다.
@@ -28,13 +30,13 @@
 
 > 비동기 처리 동작 방식
 
-1. Call Stack
+1. `Call Stack`
 
 2. Call Stack -> Web API
 
-3. Web API 처리 끝나면 Call Stack이 아니라 Task Queue 에 순서대로 들어간다.
+3. `Web API` 처리 끝나면 Call Stack이 아니라 `Task Queue` 에 순서대로 들어간다.
 
-4. Event Loop가 Call Stack이 빈다면 Task Queue에서 Call Stack으로 넣는다.
+4. `Event Loop`가 Call Stack이 빈다면 Task Queue에서 Call Stack으로 넣는다.
    
    - setTimeout으로 0으로 지정을 한다고 치면 0초 뒤에 출력하는 것이 아니라 다른 것들을 처리 한 후 지연된 setTimeout으로 지정한 코드가 실행되는 것이다.
 
@@ -48,7 +50,7 @@
   <script>
       axios.get('요청할 url')
           .then(성공하면 수행할 콜백함수)
-          .catch(실패하면 수행할 콜백함)
+          .catch(실패하면 수행할 콜백함수)
   </script>
   ```
 
@@ -64,9 +66,9 @@
 
 ### 콜백함수
 
-- 다른 함수의 인자로 전달되는 함수
+- `다른 함수의 인자로 전달되는 함수`
 
-- 비동기 작업이 완료된 후 실행할 작업을 명시하는데 사용 됨.
+- `비동기 작업이 완료된 후 실행할 작업을 명시하는데 사용` 됨.
   
   - ex) addEventListener, views 등등등
 
@@ -90,7 +92,7 @@
   
   - 요청한 작업이 성공하면 callback 실행
   
-  - 이전 작업의 성공 결과를 인자로 전달 받음.
+  - **이전 작업의 성공 결과를 인자로 전달 받음**.
 
 - catch(callback)
   
@@ -107,6 +109,18 @@
   - 기존 콜백(콜백 지옥) vs promise 방식의 차이
   
   ![](JavaScript%20심화비동기와동기_assets/2022-10-26-10-22-44-image.png)
+
+> Promise가 보장하는 것.
+> 
+> 1. callback 함수는 javaScript의 Event Loop가 현재 실행 중인 Call Stack을 완료하기 이전에는 절대 호출되지 않음.
+> 
+> 2. 비동기 작어이 서옹하거나 실패한 뒤에 .then() 메서드를 이용하여 추가한 경우에도 1번과 똑같이 동작.
+> 
+> 3. .then()을 여러번 사용하여 여러 개의 callback 함수를 추가할 수 있다.(Chaining)
+>    
+>    - 각각의 callback은 주어진 순서대로 하나하나 실행하게 됨.
+>    
+>    - Chaining은 Promise의 가장 뛰어난 장점.
 
 ### AJAX
 
