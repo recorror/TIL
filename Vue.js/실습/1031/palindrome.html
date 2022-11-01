@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>회문 검사기</h1>
+    <input v-model="msg" type="text">
+    <button>확인하기</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg:'adsf',
+      },
+      // 버튼 input 이벤트 발생시 msg의 회문 여부 검사 후 alert하기.
+    })
+  </script>
+</body>
+</html>

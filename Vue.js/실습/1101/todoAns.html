@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+</head>
+<body>
+  <div id="app">
+    <select>
+      <option value="all">전체</option>
+      <option value="isProgress">진행중</option>
+      <option value="completed">완료</option>
+    </select>
+    <input type="text" v-model="todoList">
+    <button @click="pushLists">+</button>
+    <ul>
+      <li v-for="todoList in todoLists":key="todoLists.date">
+        <input type="checkbox" v-model="todoList.isCompleted" @click="toggleTodo(todoList)">{{todoList.todoList}}
+      </li>
+    </ul>
+    <button>완료된 할 일 지우기</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        todoList: '',
+        todoLists: [],
+        isCompleted: false,
+        status:'all',
+      },
+      methods: {
+        pushLists: function(){
+          //todoList를 추가할 때 completed도 개별적으로 추가해준다.
+          const todo = {
+            todoList: this.todoList,
+            isCompleted: false,
+            date: Date().now(),
+          }
+          this.todoLists.push(todo)
+          this.todoList=''
+        },
+        toggleTodo: function (){
+          todoList.isCompleted = !todoList.isCompleted
+        },
+        deleteLists: function(){
+          
+        }
+      },
+      computed: {
+        todoListByStatus: function() {
+          const newList = this.todoLists.filter((todo) => {
+            if (this.status === 'isProgress'){
+              return !todo.isCompleted
+            } else if (this.status === 'completed') {
+              return todo.isCompleted
+            } else {
+              return true
+            }
+          })
+          return newList
+        }
+      },
+    })
+  </script>
+</body>
+</html>

@@ -74,6 +74,8 @@
 
 - vue3가 2022년 초에 정식으로 나오긴했지만 아직까지 vue2 정보가 되게 많다. 때문에 vue3 대신 vue2를 쓰자!
 
+****
+
 ### MVVM Pattern
 
 - Model( JavaScript Object, JSON ), : 실제 데이터
@@ -107,15 +109,20 @@
     console.log(vm)
 ```
 
-- 생성자 함수 
+- 생성자 함수  :: new 연산자로 사용하는 함수
   
   ```html
-  
+  function genshin(lv, Tlv) {
+      this.lv = lv
+      this.Tlv = Tlv
+  }
+  const genshin1 = new Genshin(59, 8)
   ```
 
 - el (element)
   
   - vue instance와 dom을 mount(연결)하는 옵션
+  - 1:1로 mount된다.
 
 - data
   
@@ -126,6 +133,22 @@
   - 객체 내부의 아이템들은 value로 <u>모든 타입의 객체</u>를 가질 수 있음.
   
   - 정의된 속성은 interpolation {{}}를 통해 view에 렌더링 가능함.
+    
+    ```html
+    <body>
+        <div id="abc">
+            {{a}}
+        </div>
+        <script>
+        const app = new Vue({
+        el : '#abc',
+        data : {
+          a : 'abcd'
+        }
+        })
+        </script>
+    </body>
+    ```
 
 - methods
   
@@ -136,8 +159,32 @@
   > <mark>메서드를 정의할 때, Arrow Function을 사용하면 안 된다.</mark>
   > 
   > 메서드 내부의 콜백함수를 정의할 때는 써도 된다. 왜냐하면 메서드 내부에서 한 블록 위는 객체를 가리키기 때문이다.
+  
+  ```html
+  <body>
+      <div id="abc">
+          {{a}}
+      </div>
+      <script>
+      const app = new Vue({
+        el : '#abc',
+        data : {
+          a : 'abcd'
+        },
+        methods : { 
+          pre: function () {
+            console.log(this.a)
+            this.a = 'dcba'
+          },
+        }
+      })
+      </script>
+  </body>
+  ```
 
-### Basic of Syntax
+----
+
+### ✔[Basic of Syntax](https://v2.vuejs.org/v2/guide/syntax.html)
 
 - Template Syntax
   
@@ -201,6 +248,8 @@
   
   - v-on
     
+    - 이벤트 리스너 !
+    
     - ':'을 통해 전달된 인자에 따라 특별한 modifiers가 있을 수 있다.
     
     - '@' shortcut을 제공해준다.
@@ -239,4 +288,16 @@
 
 - filters
 
-- 
+
+
+---
+
+## [Vue style guide](https://v2.vuejs.org/v2/style-guide/?redirect=true#Rule-Categories)
+
+1. v-for와 함께 key값 쓰기.
+
+2. v-for를 쓴 곳에 절대 v-if를 쓰지 말것.
+   
+   - 같이 쓸 상황에서 동시에는 절대 쓰지 말고, 반드시 둘 중 하나를 자식 태그로 써서 같이 쓸 것.
+
+3. 
