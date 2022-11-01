@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "59447d2210ce6b51",
+        "id": "9ebdfc44a55530cf",
         "type": "tabs",
         "children": [
           {
-            "id": "bb991ef57d3808d1",
+            "id": "541b75d618b654c7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/JavaScript 기초문법.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/JavaScript 기초문법.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/JavaScript 기초문법.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JavaScript/JavaScript 기초문법.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -139,17 +131,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "bb991ef57d3808d1",
+  "active": "541b75d618b654c7",
   "lastOpenFiles": [
+    "Pa![sted image 20221019152859.png.md",
+    "JavaScript/JavaScript 기초문법.md",
     "README.md",
     "JavaScript.md",
     "JavaScript/JavaScript.md",
     "JavaSctipt/JavaScript.md",
-    "JavaScript/JavaScript 기초문법.md",
     "Web/Web이란.md",
     "Web/그리드 시스템, 반응형 웹.md",
     "Django/Django rest API.md",
-    "database/DB_기본.md",
-    "database/DB_2.md"
+    "database/DB_기본.md"
   ]
 }
