@@ -121,8 +121,6 @@
 - 호환되지 않는 유형의 시스템 간에 데이터를 변환하는 프로그래밍 기술.
   
   ![](Django%20Base_assets/2022-09-19-07-31-04-image.png)
-  
-  
 
 ---
 
@@ -139,8 +137,6 @@
     ![](Django%20Base_assets/2022-09-19-07-55-35-image.png)
     
     ![](Django%20Base_assets/2022-09-19-08-09-01-image.png)
-    
-    
 
 > ### CRUD
 

@@ -21,12 +21,32 @@
 2. [심화 문법 - DOM 조작](./JavaScript/JavaScript 심화문법.md)
 3. [심화문법 - 비동기와 동기](./JavaScript/JavaScript 심화비동기와동기.md)
 
+### Vue.js
+
+1. [vue 기초문법](./Vue.js/vue기초문법.md)
+
+2. [vue CLI](./Vue.js/vue CLI.md)
+
 ### Database
 
+1. [DB 기본](./database/DB_기본.md)
 
+2. [DB_MN](./database/DB_MN.md)
 
 ### Django
 
+1. [Django 기초](./django/Django Base.md)
 
+2. [Django 시작하는 법](./django/Django 시작하기.)
+
+3. [Django Form1](./django/Django Form.md)
+
+4. [Django Form2](./django/Django Form2.md)
+
+5. [Django ModelForm](./django/Django Model.md)
+
+6. [Django REST API](./django/Django rest API.md)
+
+7. [Django Static_media](./django/Django Static_media.md)
 
 ### algorithm
