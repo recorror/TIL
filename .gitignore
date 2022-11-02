@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/pycharm,obsidian,visualstudiocode,python,django
-# Edit at https://www.toptal.com/developers/gitignore?templates=pycharm,obsidian,visualstudiocode,python,django
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,django,python,vue,vuejs,obsidian,pycharm
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,django,python,vue,vuejs,obsidian,pycharm
 
 ### Django ###
 *.log
@@ -389,4 +389,22 @@ fabric.properties
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/pycharm,obsidian,visualstudiocode,python,django
+### Vue ###
+# gitignore template for Vue.js projects
+#
+# Recommended template: Node.gitignore
+
+# TODO: where does this rule come from?
+docs/_book
+
+# TODO: where does this rule come from?
+test/
+
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,django,python,vue,vuejs,obsidian,pycharm

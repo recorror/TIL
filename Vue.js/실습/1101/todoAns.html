@@ -14,7 +14,7 @@
 </head>
 <body>
   <div id="app">
-    <select>
+    <select v-model="status">
       <option value="all">전체</option>
       <option value="isProgress">진행중</option>
       <option value="completed">완료</option>
@@ -49,12 +49,9 @@
           this.todoLists.push(todo)
           this.todoList=''
         },
-        toggleTodo: function (){
-          todoList.isCompleted = !todoList.isCompleted
+        toggleTodo: function (todo){
+          todo.isCompleted = !todo.isCompleted
         },
-        deleteLists: function(){
-          
-        }
       },
       computed: {
         todoListByStatus: function() {
