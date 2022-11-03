@@ -2,8 +2,8 @@
   <div id="app">
     <h1>App</h1>
     <input type="text" v-model="onlyData" @keyup.enter="saveAppData">
-    <p>parentData: {{parentData[0]}}</p>
-    <p>childData: {{childData[0]}}</p>
+    <p>parentData: {{parentData[parentData.length-1]}}</p>
+    <p>childData: {{childData[childData.length-1]}}</p>
     <AppParent
       :app-data="appData"
       @convey-child="conveyChild"
@@ -45,6 +45,8 @@ export default {
 #app {
   border: solid 1px gray;
   text-align: center;
-  border-bottom: 5;
+  /* border-bottom: 5; */
+  width: 500px;
+  margin: 100px auto;
 }
 </style>
