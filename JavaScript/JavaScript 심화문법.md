@@ -14,7 +14,7 @@
 
 - 특별히 import 할 것은 없다. 기본적으로 설치되어 있기 때문에
 
-- 대신, 특별한 객체를 이용해야한다.
+- 대신, `특별한 객체`를 이용해야한다.
   
   ### window
 
@@ -29,7 +29,7 @@
 - 파싱(Parsing)
   
   - 문자로 된 HTML 문서를 해석하여 Tree구조로 만들고, 스타일을 입힌 후 배치를 하는 것이다.
-  - 이 과정은 너무 빠르기 때문에 우리의 눈으로는 볼 수 없지만 이러한 과정을 거쳐서 만들어지는 것이다.
+  - 이 과정은 너무 빠르기 때문에 우리의 눈으로는 볼 수 없지만 이러한 과정을 순서대로 거쳐서 만들어지는 것이다.
 
 ----
 
@@ -39,9 +39,12 @@
   
   ### 선택
 1. 1개를 선택하는 경우
+   
    - document<mark>.querySelector</mark>(selector)
    - 첫 번째 element 객체를 반환. 없다면 null 반환.
+
 2. 여러개를 선택하는 경우
+   
    - document<mark>.querySelectorAll</mark>(selector)
    - 여러 element를 선택
 - NodeList
@@ -75,7 +78,7 @@
 
 - DOM 조작 예시
   
-  ![Pasted image 20221024145102.png](C:\Users\saffy\ssafy8\TIL\JavaScript\첨부이미지\Pasted%20image%2020221024145102.png)
+  ![Pasted image 20221024145102.png](C:\ssafy\TIL\JavaScript\첨부이미지\Pasted%20image%2020221024145102.png)
 
 - 속성 조회 및 설정
   
@@ -85,7 +88,9 @@
     
     - 이미 존재하면 값을 갱신, 존재하지 않으면 생성
       
-      ![Pasted image 20221024151608.png](C:\Users\saffy\ssafy8\TIL\JavaScript\첨부이미지\Pasted%20image%2020221024151608.png)
+      ![Pasted image 20221024151608.png](C:\ssafy\TIL\JavaScript\첨부이미지\Pasted%20image%2020221024151608.png)
+      
+      
 
 ******
 
