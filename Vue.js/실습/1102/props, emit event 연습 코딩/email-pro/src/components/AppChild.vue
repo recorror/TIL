@@ -6,9 +6,9 @@
       v-model="inputData"
       @keyup.enter="sChildData"
     >
-    <p>appData: {{appData[0]}}</p>
-    <p>parentData: {{parentData[0]}}</p>
-    <p>childData: {{childData[0]}}</p>
+    <p>appData: {{appData[appData.length-1]}}</p>
+    <p>parentData: {{parentData[parentData.length-1]}}</p>
+    <p>childData: {{childData[childData.length-1]}}</p>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
   methods: {
     sChildData: function(){
       this.childData.push(this.inputData)
-      this.$emit('convey-child', this.childData[0])
+      this.$emit('convey-child', this.childData[this.childData.length-1])
     }
   }
 }

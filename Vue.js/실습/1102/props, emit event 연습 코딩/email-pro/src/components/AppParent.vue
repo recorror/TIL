@@ -6,8 +6,8 @@
       v-model="pInputData"
       @keyup.enter="saveParentData"
     >
-    <p>appData: {{appData[0]}}</p>
-    <p>childData: {{childData[0]}}</p>
+    <p>appData: {{appData[appData.length-1]}}</p>
+    <p>childData: {{childData[childData.length-1]}}</p>
     <AppChild
       :app-data="appData"
       :parent-data="parentData"
@@ -36,11 +36,11 @@ export default {
   methods: {
     saveParentData: function () {
       this.parentData.push(this.pInputData)
-      this.$emit('convey-parent', this.parentData[0])
+      this.$emit('convey-parent', this.parentData[this.parentData.length-1])
     },
-    conveyChild: function (childData) {
-      this.childData.push(childData)
-      this.$emit('convey-child', this.childData[0])
+    conveyChild: function (event) {
+      this.childData.push(event)
+      this.$emit('convey-child', this.childData[this.childData.length-1])
     },
   }
 }
