@@ -288,11 +288,9 @@
 
 - filters
 
-
-
 ---
 
-## [Vue style guide](https://v2.vuejs.org/v2/style-guide/?redirect=true#Rule-Categories)
+## ✔[Vue style guide](https://v2.vuejs.org/v2/style-guide/?redirect=true#Rule-Categories)
 
 1. v-for와 함께 key값 쓰기.
 
