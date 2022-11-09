@@ -1,6 +1,7 @@
 # Vuex
 
-<<<<<<< HEAD
+
+
 - 상태관리 툴
 
 > ### State management
@@ -135,14 +136,13 @@ $ vue add vuex
 ### updated
 
 - 데이터가 변경되어 DOM에 변화를 줄 때 호출됨.
-
-- ~~화면 수정을 하고 싶다고 updated에 준다면 update => updated => update 등의 무한루프에 빠질 수도 있다.~~
-=======
-### State Management
+  
+  ~~화면 수정을 하고 싶다고 updated에 준다면 update => updated => update 등의 무한루프에 빠질 수도 있다.~~
+  
+  ### State Management
 
 - 현재에 대한 정보(data)
 
 - `현재 App이 가지고 있는 Data로 표현`할 수 있음
 
--  
->>>>>>> c0e7822cfce67793684ab48a38296ea1d4930de6
+- > c0e7822cfce67793684ab48a38296ea1d4930de6

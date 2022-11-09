@@ -21,9 +21,15 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    // addOrder(state) {
-    //   orderList.push({menu: state.menuList[0], size: state.sizeList[0]})
-    // },
+    addOrder(state) {
+      const addMenuList = {
+        menu: state.menuList[0]
+      }
+      const addSizeList = {
+        size: state.sizeList[0]
+      }
+      
+    },
     updateMenuList(state, selectedMenu) {
       state.menuList = state.menuList.map((se)=>{
         if (se === selectedMenu) {
