@@ -36,7 +36,7 @@
 
 > ### History mode
 
-- 브라우저의 History API를 활용한 방식
+- 브라우저의 History API를 활용한 방식 ('/' 이런 식으로 url 찍히게 설정하는 부분.)
   
   - 새로고침 없이 URL 이동 기록을 남길 수 있음.
 
@@ -58,13 +58,19 @@
 
 - router-link를 클릭하면 routes에 매핑된 컴포넌트를 렌더링.
 
-- router에 emit event를 쓸 때 여기에 써주면 된다.
+- router에 emit event를 쓸 때 여기에 써주면 된다. << ???
 
 ***
 
 ### 선언적 방식 네비게이션
 
 - router-link의 'to' 속성으로 주소 전달.
+
+- 이 때 to에 binding을 통해 url의 name 설정 해둔 것을 바인딩해준다.
+  
+  ```html
+  <router-link :to="{name : '설정해둔 이름'}">이름</router-link>
+  ```
 
 ### 프로그래밍 방식 네비게이션
 
@@ -85,6 +91,14 @@
   - URL의 특정 값을 변수처럼 사용할 수 있음.
   
   - `$route.params`로 변수에 접근 가능
+    
+    ```js
+    {
+      path: '/url/:variable',
+      name: 'boom',
+      component: SameBoom
+    }
+    ```
 
 ### lazy-loading (지연 로딩)
 
@@ -131,15 +145,25 @@
      
      - 컴포넌트 경로만 변경되었을 경우 params 의 변경을 감지하고 처리.
 
+   - 인자로 (to, from, next)를 받는다.
+
 ## Articles with Vue
 
 - django에서 만들었던 게시판 만들기
 
 - 구현 기능 : index, create, detail, delete, 404
 
-### Optional Chaining
+### [참고]Optional Chaining
 
 - Optional Chaining(?.) 앞의 평가 대상이 undefined나 null이면 에러가 발생하지 않고 undefined를 반환.
+
+### 404 NOT FOUND
+
+- const routes 내부. 즉, 최하단 부에 모든 라우터를 돌고 해당하는 라우터가 없는 경우에 404 not found 페이지를 호출시키자.
+
+- 이 때 형식은 유효한데 특정 리소스를 찾을 수 없는 경우가 있다.
+  - 데이터가 없음을 명시하거나
+  - 404 not found page로 호출해준다.
 
 ****
 
