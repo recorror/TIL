@@ -30,7 +30,7 @@ export default {
       }
       axios.get('https://www.googleapis.com/youtube/v3/search', config)
         .then(response=>{
-          console.log(response.data.items)
+          // console.log(response.data.items)
           this.$store.commit('ITEMS', response.data.items)
         })
         .catch(error=>{

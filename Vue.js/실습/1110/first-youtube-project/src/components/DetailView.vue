@@ -17,11 +17,11 @@ export default {
   name: 'DetailView',
   computed: {
     search_url(){
-      const res = this.$store.getters.useItems
-      if (res) {
-        console.log(res)
-      }
-      return res
+      const result = this.$store.state.items[0].id.videoId
+      if (result) {
+        console.log(result)
+        }
+      return result
     }
   }
 }

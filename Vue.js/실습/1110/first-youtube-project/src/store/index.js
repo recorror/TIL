@@ -8,14 +8,10 @@ export default new Vuex.Store({
     items:null,
   },
   getters: {
-    useItems(state){
-      console.log(state.items)
-      return state.items
-    }
   },
   mutations: {
-    ITEMS(state, data){
-      state.items = data
+    ITEMS(state, payload) {
+      state.items = payload
     }
   },
   actions: {
