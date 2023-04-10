@@ -50,3 +50,5 @@
 7. [Django Static_media](./django/Django Static_media.md)
 
 ### algorithm
+
+1. [Javascript-Inflearn](./Algorithm/Javascript/Inflearn)
