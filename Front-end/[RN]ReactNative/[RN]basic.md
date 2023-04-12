@@ -3,6 +3,7 @@
 - 동작원리
   
   - 자스로 코드를 짜면 네이티브와 브릿지를 거쳐서 앱에서 화면이 출력 된다.
+  - <img title="" src="file:///C:/Users/multicampus/Desktop/Study/TIL/Front-end/[RN]ReactNative/RN_markdown_img/react-native-적용과정.png" alt="">
 
 ---
 
@@ -57,5 +58,3 @@
   - PS. 대표적으로 인앱결제 같은 경우에는 native로 할 필요성이 있음.
 
 ---
-
-
