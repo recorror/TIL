@@ -9,15 +9,23 @@ import { Ionicons } from '@expo/vector-icons';
 }
 
 const IconButton = (props) => {
-  <View style={{ paddingHorizontal: 6 }}>
-    <Ionicons name={props.name} size={24} color='black' />
-  </View>;
+  return (
+    <View style={{ paddingHorizontal: 6 }}>
+      <Ionicons name={props.name} size={24} color='black' />
+    </View>
+  );
 };
 
 export default () => {
   return (
-    <View style={styles.headerContainer}>
-      <Text style={styles.title}>친구</Text>
+    <View
+      style={{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 10,
+      }}
+    >
+      <Text style={{ fontSize: 22, fontWeight: 'bold' }}>친구</Text>
       <View style={{ flexDirection: 'row' }}>
         <IconButton name='search-outline' />
         <IconButton name='person-add-outline' />
