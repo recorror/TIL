@@ -40,6 +40,6 @@
    
    - Metro waiting on <u>exp://내포트주소</u> 입력해서 들어가면 됨
 
-
-
-
+6. yarn 설치
+   
+   - npx install -g yarn
