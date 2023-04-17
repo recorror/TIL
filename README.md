@@ -51,15 +51,37 @@
 
 5. [Django ModelForm](./Back-end/django/Django-Model.md)
 
-6. [Django REST API](./Back-end/django/Django-rest API.md)
+6. [Django REST API](./Back-end/django/Django-rest-API.md)
 
 7. [Django Static_media](./Back-end/django/Django-Static_media.md)
 
 ### algorithm
 
 1. [Javascript-Inflearn](./Algorithm/Javascript/Inflearn)
+2. Programmers
 
 ### React Native
 
 1. [ReactNative basic](./Front-end/React/ReactNative/[RN]basic.md)
+
 2. [ReactNative Setting](./Front-end/React/ReactNative/[RN]Settings.md)
+
+3. [android-studio-connect](./Front-end/[RN]ReactNative/[RN]react-native-android-studio-connect.md)
+
+4. Library
+
+5. Option
+
+6. Component&Api
+   
+   - 4,5,6은 md 파일을 만들긴 했지만 공식 문서를 보는 것이 더욱 도움이 됨.
+   
+   - [ReactNative 공식문서](https://reactnative.dev/docs/)
+
+7. 실제 코드 쳐보기
+   
+   - [fast-campus 강의로 배운 것들 정리](./Front-end/[RN]ReactNative/[RN]coding.md)
+   - 노마드코더 무료강의 정리
+     - [weather](./Front-end/[RN]ReactNative/[RN]Nomad-weather.md)
+     - weather 앱 들어가기 전 기초로 배운 것들을 정리해뒀음.
+     - 실제 개발 부분은 [여기](./Front-end/[RN]ReactNative/NomadWeather)
