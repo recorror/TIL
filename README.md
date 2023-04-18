@@ -1,6 +1,6 @@
 ## 분류
 
-### GIT 정리
+### GIT 정리.
 
 1. [git bassic 정리](./Git/Git_bassic.md)
 2. [Python bassic 정리(진행중)](./Git/Python_Bassic.md)
