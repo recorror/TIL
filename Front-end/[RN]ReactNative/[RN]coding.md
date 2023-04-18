@@ -59,3 +59,39 @@ const openModal = () => {
 ---
 
 ### [NomadWeather](./[RN]Nomad-weather.md)
+
+---
+
+### chopchop's study
+
+### component 구성
+
+1. 최상단 태그를 `SafeAreaView`로 작성하여 top이나 bottom에 지정한 영역을 침범하지 못하게 한다.
+
+2. 반복되는 component는 map함수를 통해 돌리고 최상단에 key 값을 적어주고 컴포넌트 디자인을 한다.
+
+3. 어떤 양식이 올지 모르기 때문에 일단 가장 기본적은 component인 `View`와 `Text`를 통해 디자인해준다.
+
+4. img의 경우 웹이라면 그냥 img 태그를 썼겠지만 모바일의 경우 `Image` 태그를 react-native에서 import를 해서 써준다.
+   
+   ```jsx
+   <Image
+    style="height:50, width:50"
+    source={require("../../../../assets/bottom-tab/icon_contact.png")}
+   />
+   ```
+   
+   - Image 태그 예시
+   - source는 다양한 양식으로 쓸 수 있으니 상황 따라 다르게 쓰거나 convention에 맡게 사용하면 된다.
+
+5. StyleSheet.create에 관하여
+   
+   ```jsx
+   import { StyleSheet } from "react-native";
+   export const styles = StyleSheet.create({ container: { flex: 1 } },);
+   
+   export const styles1 = { container: { flex: 1 } };
+   ```
+   
+   - react-native에서는 styles1처럼 그냥 const styles를 정의하고 바로 사용하는 것도 지원을 한다.
+   - 하지만 `StyleSheet.create`를 쓰면 자동 완성이 엄청 짱짱하게 지원된다.
